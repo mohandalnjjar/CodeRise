@@ -17,7 +17,7 @@ class SecondaryItem extends StatelessWidget {
             ),
             child: SvgPicture.asset(
               'assets/ToDo.svg',
-              height: 90,
+              height: MediaQuery.of(context).size.height * .1,
             ),
           ),
           const SizedBox(

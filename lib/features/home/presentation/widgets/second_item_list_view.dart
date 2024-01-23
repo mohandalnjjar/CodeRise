@@ -11,7 +11,7 @@ class SecondList extends StatelessWidget {
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) {
-          return SecondaryItem();
+          return const SecondaryItem();
         },
         itemCount: 3,
         scrollDirection: Axis.horizontal,

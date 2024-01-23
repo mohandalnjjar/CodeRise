@@ -15,7 +15,7 @@ class HomeViweBody extends StatelessWidget {
       physics: BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
-        child: CustomAppbar(),
+          child: CustomAppbar(),
         ),
         SliverToBoxAdapter(
           child: CareersListView(),
