@@ -14,7 +14,7 @@ class CustomAppbar extends StatelessWidget {
         children: [
           Text(
             'Code Rise',
-            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 23),
           ),
         ],
       ),

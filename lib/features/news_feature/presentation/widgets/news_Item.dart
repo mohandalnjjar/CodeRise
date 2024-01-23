@@ -11,7 +11,7 @@ class NewsItem extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         child: Container(
-          height: 215,
+          height: MediaQuery.of(context).size.height * .27,
           alignment: Alignment.bottomLeft,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
@@ -40,7 +40,7 @@ class NewsItem extends StatelessWidget {
             child: const Padding(
               padding: EdgeInsets.only(left: 8, bottom: 8, right: 4),
               child: Text(
-                'This App Was Degined By Mohanad ALnjjar By The Love Flutter Developer Bl Bla Bla Bla Bla bla bla ',
+                'This App Was Degined By Mohanad ALnjjar By The Love Flutter Develope Bla Bla bla bla ',
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(

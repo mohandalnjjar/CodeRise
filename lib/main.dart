@@ -4,7 +4,7 @@ import 'constance.dart';
 import 'features/home/presentation/home_view.dart';
 
 void main(List<String> args) {
-  runApp( LearnWihtMe());
+  runApp(const LearnWihtMe());
 }
 
 class LearnWihtMe extends StatelessWidget {
