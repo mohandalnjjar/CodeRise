@@ -8,7 +8,7 @@ class NewsListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverList.builder(
       itemBuilder: ((context, index) {
-        return NewsItem();
+        return const NewsItem();
       }),
       itemCount: 10,
     );

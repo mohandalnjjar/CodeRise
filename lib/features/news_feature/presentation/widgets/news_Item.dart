@@ -14,8 +14,6 @@ class NewsItem extends StatelessWidget {
           height: 215,
           alignment: Alignment.bottomLeft,
           decoration: BoxDecoration(
-            gradient:
-                const LinearGradient(colors: [Colors.black, Colors.white]),
             borderRadius: BorderRadius.circular(20),
             image: const DecorationImage(
                 image: CachedNetworkImageProvider(

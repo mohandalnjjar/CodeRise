@@ -7,12 +7,12 @@ class SecondaryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 2.3 / 2,
+      aspectRatio: 2.4 / 2,
       child: Column(
         children: [
           Container(
             decoration: BoxDecoration(
-              color: Color(0xff191233),
+              color: const Color(0xff191233),
               borderRadius: BorderRadius.circular(20),
             ),
             child: SvgPicture.asset(

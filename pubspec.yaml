@@ -1,4 +1,5 @@
 name: learn_with_me
+
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -41,14 +42,14 @@ dependencies:
 
 flutter_native_splash:
   color: "##100B20"
-  image: assets/native_logo.png
+  image: assets/native_splash.png
   android_gravity: fill
   # branding: assets/splash.png
   # color_dark: "#ffffff"
   # image_dark: assets/splash.png
   # branding_dark: assets/splash.png
   android_12:
-    image: assets/native_logo.png
+    image: assets/native_splash.png
 
 dev_dependencies:
   flutter_lints: ^2.0.0

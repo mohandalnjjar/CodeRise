@@ -11,7 +11,10 @@ class CustomText extends StatelessWidget {
     return const Align(
       alignment: Alignment.centerLeft,
       child: Padding(
-        padding: EdgeInsets.only(top: 9, left: 23, bottom: 15),
+        padding: EdgeInsets.only(
+          top: 9,
+          left: 23,
+        ),
         child: Row(
           children: [
             Text(
