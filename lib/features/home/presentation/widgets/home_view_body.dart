@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:learn_with_me/features/home/presentation/widgets/custome_appbar.dart';
+import 'package:learn_with_me/core/utils/widgets/app_bar.dart';
 import 'package:learn_with_me/features/home/presentation/widgets/second_item_list_view.dart';
 import 'package:learn_with_me/features/news_feature/presentation/widgets/news_list_view.dart';
 
@@ -12,12 +12,13 @@ class HomeViweBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
+    return CustomScrollView(
       physics: BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
           child: CustomAppbar(
-            title: 'code Rise',
+            title: 'Code Rise',
+            onpressed: () {},
             icon: FontAwesomeIcons.magnifyingGlass,
           ),
         ),

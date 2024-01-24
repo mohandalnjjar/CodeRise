@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn_with_me/features/home/presentation/widgets/custom_careers_item.dart';
+import 'package:learn_with_me/core/utils/widgets/custom_card.dart';
 
 class CareersListView extends StatelessWidget {
   const CareersListView({super.key});
@@ -13,7 +13,7 @@ class CareersListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
-            child: CareersItem(),
+            child: CardImage(),
           );
         },
         itemCount: 5,

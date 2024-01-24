@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:learn_with_me/core/utils/assets.dart';
 
-class CareersItem extends StatelessWidget {
-  const CareersItem({
+class CardImage extends StatelessWidget {
+  const CardImage({
     super.key,
   });
 
