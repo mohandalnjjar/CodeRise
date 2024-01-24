@@ -23,7 +23,7 @@ class NewsItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             image: const DecorationImage(
                 image: CachedNetworkImageProvider(
-                  "https://img.zeit.de/wirtschaft/geldanlage/2024-01/bitcoin-kryptowaehrung-geldanlage-bild/wide__1300x731",
+                  "https://s.yimg.com/ny/api/res/1.2/6nQ2ytet01Vvt0pfL1Qcrg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-uploaded-images/2024-01/1a606460-b1f6-11ee-beda-83e91ae8eff2",
                 ),
                 fit: BoxFit.cover),
           ),
@@ -46,11 +46,10 @@ class NewsItem extends StatelessWidget {
             child: const Padding(
               padding: EdgeInsets.only(left: 8, bottom: 8, right: 4),
               child: Text(
-                'Kryptowährung: Bitcoin verliert innerhalb eines Tages mehr als neun Prozent an Wert',
-                maxLines: 3,
+                'OpenAIs policy no longer explicitly bans the use of its technology for military and warfare',
+                maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
-                  fontSize: 17,
                   fontWeight: FontWeight.w600,
                 ),
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:learn_with_me/features/home/presentation/widgets/custome_appbar.dart';
 import 'package:learn_with_me/features/home/presentation/widgets/second_item_list_view.dart';
 import 'package:learn_with_me/features/news_feature/presentation/widgets/news_list_view.dart';
@@ -15,7 +16,10 @@ class HomeViweBody extends StatelessWidget {
       physics: BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
-          child: CustomAppbar(),
+          child: CustomAppbar(
+            title: 'code Rise',
+            icon: FontAwesomeIcons.magnifyingGlass,
+          ),
         ),
         SliverToBoxAdapter(
           child: CareersListView(),

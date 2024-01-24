@@ -13,6 +13,7 @@ class SecondaryItem extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               color: const Color(0xff191233),
+              
               borderRadius: BorderRadius.circular(20),
             ),
             child: SvgPicture.asset(

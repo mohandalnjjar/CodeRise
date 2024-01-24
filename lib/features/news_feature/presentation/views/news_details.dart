@@ -6,6 +6,8 @@ class NewsDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NewsDetailsViewBody();
+    return Scaffold(
+      body: NewsDetailsViewBody(),
+    );
   }
 }
