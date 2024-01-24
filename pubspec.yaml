@@ -37,6 +37,7 @@ dependencies:
   flutter_native_splash: ^2.3.7
   flutter_svg: ^2.0.9
   font_awesome_flutter: ^10.6.0
+  go_router: ^13.0.1
   http: 0.13.6
   shimmer: ^3.0.0
 
@@ -54,13 +55,14 @@ flutter_native_splash:
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
 
-
-
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
   image_path: "assets/app_icon.png"
+
   min_sdk_android: 21 # android min sdk min:16, default 21
+  remove_alpha_ios: true
+
   # web:
   #   generate: true
   #   image_path: "path/to/image.png"
@@ -73,19 +75,14 @@ flutter_launcher_icons:
   # macos:
   #   generate: true
   #   image_path: "path/to/image.png"
-
-
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
 flutter:
-
-
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

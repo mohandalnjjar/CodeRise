@@ -1,5 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:learn_with_me/constance.dart';
 
 class NewsItem extends StatelessWidget {
   const NewsItem({super.key});
@@ -7,7 +9,11 @@ class NewsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        GoRouter.of(context).push(
+          kDetailsRouter,
+        );
+      },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         child: Container(
@@ -17,7 +23,7 @@ class NewsItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             image: const DecorationImage(
                 image: CachedNetworkImageProvider(
-                  'https://images.pexels.com/photos/23475/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                  "https://img.zeit.de/wirtschaft/geldanlage/2024-01/bitcoin-kryptowaehrung-geldanlage-bild/wide__1300x731",
                 ),
                 fit: BoxFit.cover),
           ),
@@ -40,11 +46,11 @@ class NewsItem extends StatelessWidget {
             child: const Padding(
               padding: EdgeInsets.only(left: 8, bottom: 8, right: 4),
               child: Text(
-                'This App Was Degined By Mohanad ALnjjar By The Love Flutter Develope Bla Bla bla bla ',
+                'Kryptowährung: Bitcoin verliert innerhalb eines Tages mehr als neun Prozent an Wert',
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 17,
                   fontWeight: FontWeight.w600,
                 ),
               ),
