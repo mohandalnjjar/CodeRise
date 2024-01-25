@@ -12,6 +12,7 @@ class SearchScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: CustomScrollView(
+          physics: const BouncingScrollPhysics(),
           slivers: [
             SliverToBoxAdapter(
               child: CustomAppbar(
@@ -22,7 +23,10 @@ class SearchScreen extends StatelessWidget {
             ),
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 0),
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                ),
                 child: TextField(
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(

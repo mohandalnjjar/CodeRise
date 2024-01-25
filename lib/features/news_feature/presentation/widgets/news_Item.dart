@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learn_with_me/constance.dart';
 
-import '../../../../core/utils/styles.dart';
 
 class NewsItem extends StatelessWidget {
   const NewsItem({super.key});
@@ -34,37 +33,34 @@ class NewsItem extends StatelessWidget {
                   image: DecorationImage(
                       image: CachedNetworkImageProvider(
                           'https://images.pexels.com/photos/360438/pexels-photo-360438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
-                      fit: BoxFit.cover),
+                      fit: BoxFit.fill),
                 ),
               ),
               SizedBox(
                 width: 15,
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * .4,
-                    child: Text(
-                      'WIRED,s 2023 Year-in-Review Quiz',
+              Flexible(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text(
+                      'WIRED,s 2023 Year-in-Review Quiz WIRED, Year-in-Review Quiz',
                       style: TextStyle(
-                        fontSize: 17,
                         fontWeight: FontWeight.w500,
                       ),
+                      overflow: TextOverflow.ellipsis,
                       maxLines: 3,
+                    ),
+                    Text(
+                      'From OpenAI science and technology stories from this year science and technology stories from this year',
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
+                      maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * .4,
-                    child: Text(
-                      'From OpenAI to Ozempic, test your knowledge about some of the biggest science and technology stories from this year',
-                      style: TextStyle(color: Colors.grey, fontSize: 17),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               )
             ],
           ),
