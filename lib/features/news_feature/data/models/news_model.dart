@@ -21,12 +21,12 @@ class NewsModel {
     return NewsModel(
         sourec: Source(
             id: JsonData['source']['id'], name: JsonData['source']['name']),
-        description: JsonData['articles']['description'],
-        content: JsonData['articles']['content'],
-        urlToImage: JsonData['articles']['urlToImage'],
-        publishedA: JsonData['articles']['publishedAt'],
-        title: JsonData['articles']['title'],
-        author: JsonData['articles']['author']);
+        description: JsonData['description'],
+        content: JsonData['content'],
+        urlToImage: JsonData['urlToImage'],
+        publishedA: JsonData['publishedAt'],
+        title: JsonData['title'],
+        author: JsonData['author']);
   }
 }
 
