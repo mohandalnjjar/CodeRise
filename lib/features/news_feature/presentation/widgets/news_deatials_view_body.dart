@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:learn_with_me/core/utils/styles.dart';
 import 'package:learn_with_me/core/utils/widgets/app_bar.dart';
 import 'package:learn_with_me/core/utils/widgets/custom_card.dart';
@@ -19,7 +20,7 @@ class NewsDetailsViewBody extends StatelessWidget {
               IconSize: 22,
               icon: FontAwesomeIcons.x,
               onpressed: () {
-                Navigator.of(context).pop();
+               context.pop();
               },
             ),
           ),

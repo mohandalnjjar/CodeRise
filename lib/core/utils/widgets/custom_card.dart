@@ -12,7 +12,7 @@ class CardImage extends StatelessWidget {
       aspectRatio: 2.9 / 2,
       child: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(19),
+            borderRadius: BorderRadius.circular(18),
             image: const DecorationImage(
               fit: BoxFit.cover,
               image: AssetImage(AssetData.testImage),

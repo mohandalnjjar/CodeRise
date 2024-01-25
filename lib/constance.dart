@@ -7,3 +7,4 @@ const kprimaryColor = Color(0xff100B20);
 
 const kDetailsRouter = '/DetailsView';
 const kMainRouter = '/';
+const kSearchScreenRouter = '/SearchScreen';

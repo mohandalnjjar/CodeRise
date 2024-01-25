@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
+import 'package:learn_with_me/constance.dart';
 import 'package:learn_with_me/core/utils/widgets/app_bar.dart';
 import 'package:learn_with_me/features/home/presentation/widgets/second_item_list_view.dart';
 import 'package:learn_with_me/features/news_feature/presentation/widgets/news_list_view.dart';
@@ -18,7 +20,9 @@ class HomeViweBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: CustomAppbar(
             title: 'Code Rise',
-            onpressed: () {},
+            onpressed: () {
+              GoRouter.of(context).push(kSearchScreenRouter);
+            },
             icon: FontAwesomeIcons.magnifyingGlass,
           ),
         ),

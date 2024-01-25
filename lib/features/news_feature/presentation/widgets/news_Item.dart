@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learn_with_me/constance.dart';
 
+import '../../../../core/utils/styles.dart';
+
 class NewsItem extends StatelessWidget {
   const NewsItem({super.key});
 
@@ -15,46 +17,56 @@ class NewsItem extends StatelessWidget {
         );
       },
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 13),
         child: Container(
-          height: MediaQuery.of(context).size.height * .27,
-          alignment: Alignment.bottomLeft,
+          padding: EdgeInsets.all(8),
+          height: MediaQuery.of(context).size.height * .17,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            image: const DecorationImage(
-                image: CachedNetworkImageProvider(
-                  "https://s.yimg.com/ny/api/res/1.2/6nQ2ytet01Vvt0pfL1Qcrg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-uploaded-images/2024-01/1a606460-b1f6-11ee-beda-83e91ae8eff2",
-                ),
-                fit: BoxFit.cover),
+            color: Color(0xff191233).withOpacity(0.6),
+            borderRadius: BorderRadius.circular(17),
           ),
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(20),
-                bottomRight: Radius.circular(20),
-              ),
-              gradient: LinearGradient(
-                end: Alignment.topCenter,
-                begin: Alignment.bottomCenter,
-                colors: [
-                  Colors.black87,
-                  Colors.black54,
-                  Colors.black38.withOpacity(0),
-                ],
-              ),
-            ),
-            child: const Padding(
-              padding: EdgeInsets.only(left: 8, bottom: 8, right: 4),
-              child: Text(
-                'OpenAIs policy no longer explicitly bans the use of its technology for military and warfare',
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  fontSize: 17,
-                  fontWeight: FontWeight.w600,
+          child: Row(
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width * .41,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  image: DecorationImage(
+                      image: CachedNetworkImageProvider(
+                          'https://images.pexels.com/photos/360438/pexels-photo-360438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+                      fit: BoxFit.cover),
                 ),
               ),
-            ),
+              SizedBox(
+                width: 15,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * .4,
+                    child: Text(
+                      'WIRED,s 2023 Year-in-Review Quiz',
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * .4,
+                    child: Text(
+                      'From OpenAI to Ozempic, test your knowledge about some of the biggest science and technology stories from this year',
+                      style: TextStyle(color: Colors.grey, fontSize: 17),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ],
+              )
+            ],
           ),
         ),
       ),
