@@ -7,10 +7,10 @@ part 'fetch_news_state.dart';
 class FetchnewsCubit extends Cubit<FetchnewsState> {
   FetchnewsCubit(this.homeRepo) : super(FetchnewsInitial());
 
-  final HomeRepo homeRepo;
+  final NewsRepoImpl homeRepo;
   Future<void> fetchNews() async {
     emit(
-      FetchnewsLoading(),
+      FetchNewsLoading(),
     );
 
     var Result = await homeRepo.fetchNews();

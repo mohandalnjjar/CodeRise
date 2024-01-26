@@ -4,7 +4,7 @@ abstract class FetchnewsState {}
 
 class FetchnewsInitial extends FetchnewsState {}
 
-class FetchnewsLoading extends FetchnewsState {}
+class FetchNewsLoading extends FetchnewsState {}
 
 class FetchnewsFailure extends FetchnewsState {
   final String errorMesaage;
