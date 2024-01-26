@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 import 'package:learn_with_me/core/errors/failures.dart';
 import 'package:learn_with_me/core/utils/api_services.dart';
 import 'package:learn_with_me/features/news_feature/data/models/news_model.dart';
@@ -20,9 +21,17 @@ class HomeRepo implements NewsRpo {
       }
       return right(newsData);
     } catch (e) {
-      return left(
-        serverFailure(),
-      );
+      if (e is DioException) {
+        return left(
+          serverFailure.fromDioException(e),
+        );
+      } else {
+        return left(
+          serverFailure(
+            errorMessage: e.toString(),
+          ),
+        );
+      }
     }
   }
 }
