@@ -51,7 +51,7 @@ class NewsDetailsViewBody extends StatelessWidget {
                     height: 3,
                   ),
                   Text(
-                    "Posted at ${newsModel.publishedA}",
+                    "Posted at ${newsModel.publishedAt.year}:${newsModel.publishedAt.month}:${newsModel.publishedAt.day}",
                     style: TextStyle(fontSize: 14, color: Colors.grey),
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,

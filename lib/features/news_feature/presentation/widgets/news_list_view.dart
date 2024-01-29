@@ -24,7 +24,7 @@ class NewsListView extends StatelessWidget {
         } else if (state is FetchNewsFailure) {
           return ErrorSnackBar(errorMessage: state.errorMesaage);
         } else {
-          return LoadingIndicator();
+          return ShimmerLaodingIndicator();
         }
       },
     );

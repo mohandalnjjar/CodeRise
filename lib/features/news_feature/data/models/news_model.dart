@@ -4,7 +4,7 @@ class NewsModel {
   final String? description;
   final String? content;
   final String? urlToImage;
-  final String publishedA;
+  final DateTime publishedAt;
   final Source sourec;
 
   NewsModel({
@@ -12,7 +12,7 @@ class NewsModel {
     required this.description,
     required this.content,
     required this.urlToImage,
-    required this.publishedA,
+    required this.publishedAt,
     required this.title,
     required this.author,
   });
@@ -24,7 +24,7 @@ class NewsModel {
         description: JsonData['description'],
         content: JsonData['content'],
         urlToImage: JsonData['urlToImage'],
-        publishedA: JsonData['publishedAt'],
+        publishedAt: DateTime.parse(JsonData['publishedAt']),
         title: JsonData['title'],
         author: JsonData['author']);
   }

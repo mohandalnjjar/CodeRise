@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
-
-class LoadingIndicator extends StatelessWidget {
-  const LoadingIndicator({super.key});
+               
+class ShimmerLaodingIndicator extends StatelessWidget {
+  const ShimmerLaodingIndicator({super.key});
   @override
   Widget build(BuildContext context) {
     return SliverList.builder(
