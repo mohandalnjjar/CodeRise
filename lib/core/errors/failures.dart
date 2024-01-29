@@ -26,7 +26,7 @@ class serverFailure extends Failure {
       case DioExceptionType.cancel:
         return serverFailure(errorMessage: 'Canceld');
       case DioExceptionType.connectionError:
-        return serverFailure(errorMessage: 'Connection');
+        return serverFailure(errorMessage: 'Check Your Inter Net Connection');
       case DioExceptionType.unknown:
         if (dioException.message!.contains('SocketException')) {
           return serverFailure(errorMessage: "Enternet Error");

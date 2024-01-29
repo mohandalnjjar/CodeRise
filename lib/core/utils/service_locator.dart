@@ -4,7 +4,8 @@ import 'package:learn_with_me/core/utils/api_services.dart';
 import 'package:learn_with_me/features/news_feature/data/models/repos/news_repo_impl.dart';
 
 final getit = GetIt.instance;
-void setup() {
+
+void Locator() {
   getit.registerSingleton<NewsRepoImpl>(
     NewsRepoImpl(
       apiService: ApiService(

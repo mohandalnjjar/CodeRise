@@ -4,24 +4,24 @@ import 'package:learn_with_me/features/news_feature/data/models/repos/news_repo_
 
 part 'fetch_news_state.dart';
 
-class FetchnewsCubit extends Cubit<FetchnewsState> {
-  FetchnewsCubit(this.homeRepo) : super(FetchnewsInitial());
+class FetchNewsCubit extends Cubit<FetchNewsState> {
+  FetchNewsCubit(this.newsRepo) : super(FetchnewsInitial());
 
-  final NewsRepoImpl homeRepo;
-  Future<void> fetchNews() async {
+  final NewsRepoImpl newsRepo;
+  Future<void> fetchNewsMethod() async {
     emit(
       FetchNewsLoading(),
     );
 
-    var Result = await homeRepo.fetchNews();
+    var Result = await newsRepo.fetchNews();
 
     Result.fold((failure) {
       emit(
-        FetchnewsFailure(errorMesaage: failure.errorMessage),
+        FetchNewsFailure(errorMesaage: failure.errorMessage),
       );
     }, (news) {
       emit(
-        FetchnewsScucces(newsData: news),
+        FetchNewsScucces(newsData: news),
       );
     });
   }

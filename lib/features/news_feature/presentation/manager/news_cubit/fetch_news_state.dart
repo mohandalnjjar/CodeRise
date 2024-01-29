@@ -1,19 +1,19 @@
 part of 'fetch_news_cubit.dart';
 
-abstract class FetchnewsState {}
+abstract class FetchNewsState {}
 
-class FetchnewsInitial extends FetchnewsState {}
+class FetchnewsInitial extends FetchNewsState {}
 
-class FetchNewsLoading extends FetchnewsState {}
+class FetchNewsLoading extends FetchNewsState {}
 
-class FetchnewsFailure extends FetchnewsState {
+class FetchNewsFailure extends FetchNewsState {
   final String errorMesaage;
 
-  FetchnewsFailure({required this.errorMesaage});
+  FetchNewsFailure({required this.errorMesaage});
 }
 
-class FetchnewsScucces extends FetchnewsState {
+class FetchNewsScucces extends FetchNewsState {
   final List<NewsModel> newsData;
 
-  FetchnewsScucces({required this.newsData});
+  FetchNewsScucces({required this.newsData});
 }

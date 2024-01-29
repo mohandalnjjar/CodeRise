@@ -1,9 +1,9 @@
 class NewsModel {
-  final String author;
+  final String? author;
   final String title;
-  final String description;
-  final String content;
-  final String urlToImage;
+  final String? description;
+  final String? content;
+  final String? urlToImage;
   final String publishedA;
   final Source sourec;
 
@@ -31,7 +31,7 @@ class NewsModel {
 }
 
 class Source {
-  final String id;
+  final String? id;
   final String name;
 
   Source({required this.id, required this.name});

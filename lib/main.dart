@@ -4,25 +4,29 @@ import 'package:learn_with_me/core/utils/app_router.dart';
 import 'package:learn_with_me/core/utils/service_locator.dart';
 import 'package:learn_with_me/features/news_feature/data/models/repos/news_repo_impl.dart';
 import 'package:learn_with_me/features/news_feature/presentation/manager/news_cubit/fetch_news_cubit.dart';
-
 import 'constance.dart';
 
 void main(List<String> args) {
-  runApp(const LearnWihtMe());
+  Locator();
+  runApp(
+    const CodeRise(),
+  );
 }
 
-class LearnWihtMe extends StatelessWidget {
-  const LearnWihtMe({super.key});
+class CodeRise extends StatelessWidget {
+  const CodeRise({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => FetchnewsCubit(
-            getit.get<NewsRepoImpl>(),
-          ),
-        ),
+          create: (context) {
+            return FetchNewsCubit(
+              getit.get<NewsRepoImpl>(),
+            )..fetchNewsMethod();
+          },
+        )
       ],
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
