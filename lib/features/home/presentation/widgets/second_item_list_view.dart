@@ -1,19 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:learn_with_me/features/home/data/models/second_list_view_mode.dart';
 import 'package:learn_with_me/features/home/presentation/widgets/second_list_item.dart';
 
 class SecondList extends StatelessWidget {
-  const SecondList({super.key});
-
+  SecondList({super.key});
+  final List DataList = [
+    SecondListViewModel(
+      Image: 'assets/trouble.png',
+      Ttile: 'TO Do',
+      OnPressd: () {},
+    ),
+    SecondListViewModel(
+      Image: 'assets/chat-gpt.png',
+      Ttile: 'Ai Chat',
+      OnPressd: () {},
+    ),
+    SecondListViewModel(
+      Image: 'assets/education.png',
+      Ttile: 'Books',
+      OnPressd: () {},
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * .15,
+      height: MediaQuery.of(context).size.height * .140,
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) {
-          return const SecondaryItem();
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: SecondaryItem(
+              data: DataList[index],
+            ),
+          );
         },
-        itemCount: 3,
+        itemCount: DataList.length,
         scrollDirection: Axis.horizontal,
       ),
     );
