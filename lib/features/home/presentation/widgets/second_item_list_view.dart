@@ -4,6 +4,7 @@ import 'package:learn_with_me/features/home/presentation/widgets/second_list_ite
 
 class SecondList extends StatelessWidget {
   SecondList({super.key});
+
   final List DataList = [
     SecondListViewModel(
       Image: 'assets/trouble.png',
@@ -21,6 +22,7 @@ class SecondList extends StatelessWidget {
       OnPressd: () {},
     ),
   ];
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -29,7 +31,7 @@ class SecondList extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 21),
             child: SecondaryItem(
               data: DataList[index],
             ),
