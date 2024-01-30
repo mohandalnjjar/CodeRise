@@ -5,6 +5,7 @@ const kprimaryColor = Color(0xff100B20);
 
 //ROUTERS PATHS:
 
-const kDetailsRouter = '/DetailsView';
 const kMainRouter = '/';
-const kSearchScreenRouter = '/SearchScreen';
+const kDetailsRouter = '/DetailsView';
+const kSearchScreenRouter = '/SearchView';
+const kTODoView = '/ToDoView';

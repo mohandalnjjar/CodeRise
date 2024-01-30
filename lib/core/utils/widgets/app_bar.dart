@@ -11,7 +11,6 @@ class CustomAppbar extends StatelessWidget {
   });
   final String title;
   final double TitleSize;
-
   final IconData icon;
   final double IconSize;
 
