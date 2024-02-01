@@ -53,3 +53,7 @@ class serverFailure extends Failure {
     }
   }
 }
+
+class HiveFailure extends Failure {
+  HiveFailure({required super.errorMessage});
+}
