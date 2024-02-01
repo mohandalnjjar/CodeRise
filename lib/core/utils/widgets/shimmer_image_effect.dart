@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn_with_me/constance.dart';
+import 'package:learn_with_me/core/utils/constance.dart';
 import 'package:shimmer/shimmer.dart';
 
 class ShimmerImageEffect extends StatelessWidget {

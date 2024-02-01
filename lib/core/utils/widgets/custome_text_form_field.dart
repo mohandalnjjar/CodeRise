@@ -13,7 +13,7 @@ class CustomTextFormField extends StatelessWidget {
       onSaved: onSaved,
       validator: (value) {
         if (value?.isEmpty ?? true) {
-          return 'Field Is Empty';
+          return 'field is empty';
         } else {
           return null;
         }

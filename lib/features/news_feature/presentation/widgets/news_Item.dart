@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:learn_with_me/constance.dart';
+import 'package:learn_with_me/core/utils/constance.dart';
 import 'package:learn_with_me/core/utils/widgets/shimmer_image_effect.dart';
 import 'package:learn_with_me/features/news_feature/data/models/news_model.dart';
 
