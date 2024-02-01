@@ -11,7 +11,7 @@ class ShimmerImageEffect extends StatelessWidget {
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
       child: Container(
-        color: kprimaryColor,
+        color: kPrimaryColor,
       ),
       baseColor: const Color(0xff191233).withOpacity(0.6),
       highlightColor: const Color.fromARGB(255, 71, 41, 119),

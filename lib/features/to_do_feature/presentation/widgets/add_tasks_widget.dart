@@ -10,7 +10,7 @@ class AddTasksWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: kprimaryColor,
+        color: kPrimaryColor,
         borderRadius: BorderRadius.circular(20),
       ),
       padding: EdgeInsets.all(20),

@@ -12,7 +12,7 @@ class ToDoHomeView extends StatelessWidget {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: kprimaryColor,
+        backgroundColor: kPrimaryColor,
         child: Icon(Icons.add),
         onPressed: () {
           showModalBottomSheet(
@@ -63,7 +63,7 @@ class ToDoHomeView extends StatelessWidget {
                 right: 15,
               ),
               decoration: BoxDecoration(
-                color: KsecondPrimaryColor,
+                color: kSecondPrimaryColor,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: TasksList(),
