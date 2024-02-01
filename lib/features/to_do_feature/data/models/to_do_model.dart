@@ -1,5 +1,5 @@
 class ToDoModel {
-  final String TODo;
+  final String ToDo;
 
-  ToDoModel({required this.TODo});
+  ToDoModel({required this.ToDo});
 }
