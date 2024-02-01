@@ -1,4 +1,4 @@
-part of 'to_do_cubit.dart';
+part of 'add_to_do_cubit.dart';
 
 @immutable
 sealed class ToDoState {}
