@@ -29,10 +29,8 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-
   aws_ec2_instance_connect_api: ^2.0.0
   cached_network_image: ^3.3.1
-  carousel_slider: ^4.2.1
   cupertino_icons: ^1.0.2
   dartz: ^0.10.1
   dio: ^5.4.0
@@ -44,6 +42,8 @@ dependencies:
   font_awesome_flutter: ^10.6.0
   get_it: ^7.6.7
   go_router: ^13.0.1
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
   http: 0.13.6
   shimmer: ^3.0.0
 
@@ -58,6 +58,9 @@ flutter_native_splash:
     image: assets/native_splash.png
 
 dev_dependencies:
+
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.8
   flutter_launcher_icons: ^0.13.1
 
 flutter_launcher_icons:
@@ -73,7 +76,7 @@ flutter_launcher_icons:
   #   image_path: "path/to/image.png"
   #   background_color: "#hexcode"
   #   theme_color: "#hexcode"
-  # windows:
+  # wind-ows:
   #   generate: true
   #   image_path: "path/to/image.png"
   #   icon_size: 48 # min:48, max:256, default: 48

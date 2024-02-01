@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TasksList extends StatefulWidget {
   TasksList({
@@ -18,11 +19,15 @@ class _TasksListState extends State<TasksList> {
       children: [
         ListTile(
           title: Text(
-            'this is the first to do ever ',
+            'Go to shop ,buy new tyires for my car and stay behind the nile for one hour',
             style: TextStyle(
               decoration: IsChecked! ? TextDecoration.lineThrough : null,
               fontSize: 19,
             ),
+          ),
+          leading: IconButton(
+            icon: Icon(FontAwesomeIcons.xmark),
+            onPressed: () {},
           ),
           trailing: Checkbox(
             activeColor: Colors.green,
