@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_with_me/constance.dart';
+import 'package:learn_with_me/core/utils/widgets/custome_button.dart';
+import 'package:learn_with_me/core/utils/widgets/custome_text_form_field.dart';
 
 class AddTasksWidget extends StatelessWidget {
   const AddTasksWidget({
@@ -14,10 +16,33 @@ class AddTasksWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       padding: EdgeInsets.all(20),
+      child: ToDoForm(),
+    );
+  }
+}
+
+class ToDoForm extends StatefulWidget {
+  const ToDoForm({
+    super.key,
+  });
+
+  @override
+  State<ToDoForm> createState() => _ToDoFormState();
+}
+
+class _ToDoFormState extends State<ToDoForm> {
+  final GlobalKey<FormState> FormKkey = GlobalKey();
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+  String? title;
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: FormKkey,
+      autovalidateMode: autovalidateMode,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(
+          const Text(
             'Add Task',
             style: TextStyle(
               color: Colors.white,
@@ -26,38 +51,22 @@ class AddTasksWidget extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 16),
-            child: TextField(
-              textAlign: TextAlign.center,
-              autofocus: true,
-              decoration: InputDecoration(
-                hintText: 'New To Do',
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(
-                    color: Colors.white,
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(
-                    color: Colors.blue,
-                  ),
-                ),
-              ),
+            child: CustomTextFormField(
+              hint: 'New To Do',
+              onSaved: (value) {
+                title = value;
+              },
             ),
           ),
-          TextButton(
-            onPressed: () {},
-            child: Text(
-              'Add',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-              ),
-            ),
-            style: TextButton.styleFrom(
-              backgroundColor: Colors.green,
-            ),
+          CustomeButton(
+            title: 'Add',
+            onPressed: () {
+              if (FormKkey.currentState!.validate()) {
+                FormKkey.currentState!.save();
+              } else {
+                autovalidateMode = AutovalidateMode.always;
+              }
+            },
           ),
         ],
       ),
