@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learn_with_me/core/utils/widgets/app_bar.dart';
+import 'package:learn_with_me/features/news_feature/presentation/widgets/custom_text_field.dart';
 import 'package:learn_with_me/features/news_feature/presentation/widgets/search_news_list_view.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -27,26 +28,7 @@ class SearchScreen extends StatelessWidget {
                   left: 20,
                   right: 20,
                 ),
-                child: TextField(
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: BorderSide(color: Colors.white),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: BorderSide(color: Colors.blue),
-                    ),
-                    suffixIcon: IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        FontAwesomeIcons.magnifyingGlass,
-                        color: Colors.white,
-                      ),
-                    ),
-                    hintText: 'Search',
-                  ),
-                ),
+                child: const CustomTextField(),
               ),
             ),
             SliverToBoxAdapter(

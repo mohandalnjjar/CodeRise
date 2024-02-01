@@ -16,9 +16,21 @@ class ToDoHomeView extends StatelessWidget {
         child: Icon(Icons.add),
         onPressed: () {
           showModalBottomSheet(
+              backgroundColor: Colors.transparent,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              isScrollControlled: true,
               context: context,
               builder: (context) {
-                return AddTasksWidget();
+                return SingleChildScrollView(
+                  child: Container(
+                    padding: EdgeInsets.only(
+                      bottom: MediaQuery.of(context).viewInsets.bottom,
+                    ),
+                    child: AddTasksWidget(),
+                  ),
+                );
               });
         },
       ),
@@ -51,7 +63,7 @@ class ToDoHomeView extends StatelessWidget {
                 right: 15,
               ),
               decoration: BoxDecoration(
-                color: Color(0xff191233),
+                color: KsecondPrimaryColor,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: TasksList(),
