@@ -10,8 +10,10 @@ import 'core/utils/constance.dart';
 
 void main(List<String> args) async {
   await Hive.initFlutter();
-  await Hive.openBox(KToDoBox);
   Hive.registerAdapter(ToDoModelAdapter());
+
+  await Hive.openBox<ToDoModel>(KToDoBox);
+
   Locator();
   runApp(
     const CodeRise(),
@@ -23,16 +25,12 @@ class CodeRise extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) {
-            return FetchNewsCubit(
-              getit.get<NewsRepoImpl>(),
-            )..fetchNewsMethod();
-          },
-        )
-      ],
+    return BlocProvider(
+      create: (context) {
+        return FetchNewsCubit(
+          getit.get<NewsRepoImpl>(),
+        )..fetchNewsMethod();
+      },
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,

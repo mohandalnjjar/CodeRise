@@ -1,25 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:learn_with_me/core/utils/constance.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learn_with_me/core/utils/widgets/custome_button.dart';
 import 'package:learn_with_me/core/utils/widgets/custome_text_form_field.dart';
-
-class AddTasksWidget extends StatelessWidget {
-  const AddTasksWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: kPrimaryColor,
-        borderRadius: BorderRadius.circular(20),
-      ),
-      padding: EdgeInsets.all(20),
-      child: ToDoForm(),
-    );
-  }
-}
+import 'package:learn_with_me/features/to_do_feature/data/models/to_do_model.dart';
+import 'package:learn_with_me/features/to_do_feature/presentation/manager/add_to_do_cubit/add_to_do_cubit.dart';
 
 class ToDoForm extends StatefulWidget {
   const ToDoForm({
@@ -63,6 +47,8 @@ class _ToDoFormState extends State<ToDoForm> {
             onPressed: () {
               if (FormKkey.currentState!.validate()) {
                 FormKkey.currentState!.save();
+
+                BlocProvider.of<ToDoCubit>(context).AddToDoMethod(todo: ToDoModel(title: title!));
               } else {
                 autovalidateMode = AutovalidateMode.always;
               }

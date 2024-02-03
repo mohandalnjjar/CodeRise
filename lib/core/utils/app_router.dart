@@ -4,7 +4,7 @@ import 'package:learn_with_me/features/home/presentation/views/home_view.dart';
 import 'package:learn_with_me/features/news_feature/data/models/news_model.dart';
 import 'package:learn_with_me/features/news_feature/presentation/views/news_details_view.dart';
 import 'package:learn_with_me/features/news_feature/presentation/views/search_screen.dart';
-import 'package:learn_with_me/features/to_do_feature/presentation/views/to_do_view.dart';
+import 'package:learn_with_me/features/to_do_feature/presentation/views/to_do_home_view.dart';
 
 abstract class AppRouter {
   static final router = GoRouter(
@@ -24,7 +24,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kTODoView,
-        builder: (context, state) => ToDoHomeView(),
+        builder: (context, state) => ToDoView(),
       )
     ],
   );

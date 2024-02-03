@@ -8,11 +8,11 @@ part 'add_to_do_state.dart';
 class ToDoCubit extends Cubit<ToDoState> {
   ToDoCubit(this.implementation) : super(ToDoInitial());
   final TodoImpl implementation;
-  Future<void> AddToDoMethod() async {
+  Future<void> AddToDoMethod({required ToDoModel todo}) async {
     emit(
       ToDoLoading(),
     );
-    var Result = await implementation.AddToDoMethod(ToDoModel(title: 'title'));
+    var Result = await implementation.AddToDoMethod(todo);
 
     Result.fold(
       (left) => emit(
