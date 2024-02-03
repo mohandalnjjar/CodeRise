@@ -10,7 +10,7 @@ const kSecondPrimaryColor = Color(0xff191233);
 const kMainRouter = '/';
 const kDetailsRouter = '/DetailsView';
 const kSearchScreenRouter = '/SearchView';
-const kTODoView = '/ToDoView';
+const kTODoHomeView = '/kTODoHomeView';
 
 //Hive package :
 

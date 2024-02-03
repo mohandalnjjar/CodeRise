@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:learn_with_me/features/home/data/models/second_list_view_mode.dart';
 
-class SecondaryItem extends StatelessWidget {
-  const SecondaryItem({super.key, required this.data});
+class SecondListItem extends StatelessWidget {
+  const SecondListItem({super.key, required this.data});
   final SecondListViewModel data;
   @override
   Widget build(BuildContext context) {

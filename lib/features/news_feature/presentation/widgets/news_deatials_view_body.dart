@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learn_with_me/core/utils/styles.dart';
-import 'package:learn_with_me/core/utils/widgets/app_bar.dart';
+import 'package:learn_with_me/core/utils/widgets/cutom_app_bar.dart';
 import 'package:learn_with_me/features/news_feature/data/models/news_model.dart';
 
 class NewsDetailsViewBody extends StatelessWidget {

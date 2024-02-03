@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:learn_with_me/core/utils/constance.dart';
 import 'package:learn_with_me/features/home/data/models/second_list_view_mode.dart';
 import 'package:learn_with_me/features/home/presentation/widgets/second_list_item.dart';
 
@@ -10,8 +12,10 @@ class SecondList extends StatelessWidget {
     final List DataList = [
       SecondListViewModel(
         Image: 'assets/trouble.png',
-        Ttile: 'TO Do',
-        OnPressd: () {},
+        Ttile: 'To Do',
+        OnPressd: () {
+          GoRouter.of(context).push(kTODoHomeView);
+        },
       ),
       SecondListViewModel(
         Image: 'assets/chat-gpt.png',
@@ -31,7 +35,7 @@ class SecondList extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 21),
-            child: SecondaryItem(
+            child: SecondListItem(
               data: DataList[index],
             ),
           );
