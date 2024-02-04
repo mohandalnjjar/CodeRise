@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_with_me/core/utils/constance.dart';
 import 'package:learn_with_me/core/utils/widgets/cutom_app_bar.dart';
-import 'package:learn_with_me/features/to_do_feature/models/to_do_model.dart';
 import 'package:learn_with_me/features/to_do_feature/widgets/to_do_list_view.dart';
 
 class ToDoViewBody extends StatelessWidget {
@@ -9,13 +8,6 @@ class ToDoViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<ToDoModel> todomodel = [
-      ToDoModel(title: 'mohanad'),
-      ToDoModel(title: 'Mohamed'),
-      ToDoModel(title: 'Loves'),
-      ToDoModel(title: 'Mai'),
-      ToDoModel(title: 'Medahat'),
-    ];
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -26,7 +18,7 @@ class ToDoViewBody extends StatelessWidget {
             IconSize: 35,
           ),
         ),
-        const Padding(
+        Padding(
           padding: EdgeInsets.symmetric(horizontal: 17),
           child: Text(
             '5 Tasks',
@@ -40,9 +32,7 @@ class ToDoViewBody extends StatelessWidget {
               color: kSecondPrimaryColor,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: ToDoList(
-              todomodel: todomodel,
-            ),
+            child: ToDoList(),
           ),
         )
       ],
