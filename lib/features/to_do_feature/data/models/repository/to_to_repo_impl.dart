@@ -2,12 +2,12 @@ import 'package:dartz/dartz.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:learn_with_me/core/errors/failures.dart';
 import 'package:learn_with_me/core/utils/constance.dart';
-import 'package:learn_with_me/features/to_do_feature/models/repository/to_do_repo.dart';
-import 'package:learn_with_me/features/to_do_feature/models/to_do_model.dart';
+import 'package:learn_with_me/features/to_do_feature/data/models/repository/to_do_repo.dart';
+import 'package:learn_with_me/features/to_do_feature/data/models/to_do_model.dart';
 
 class ToDoRepoImpl extends ToDorepo {
   @override
-  Future<Either<Failure, void>> AddToDoMethod(ToDoModel todo) async {
+  Future<Either<Failure, void>> AddToDo(ToDoModel todo) async {
     try {
       var ToDoBox = Hive.box<ToDoModel>(KToDoBox);
       await ToDoBox.add(todo);

@@ -18,7 +18,7 @@ class ToDoViewBody extends StatelessWidget {
             IconSize: 35,
           ),
         ),
-        Padding(
+        const Padding(
           padding: EdgeInsets.symmetric(horizontal: 17),
           child: Text(
             '5 Tasks',
@@ -27,12 +27,13 @@ class ToDoViewBody extends StatelessWidget {
         ),
         Expanded(
           child: Container(
-            margin: EdgeInsets.only(top: 20, left: 15, right: 15, bottom: 50),
+            margin:
+                const EdgeInsets.only(top: 20, left: 15, right: 15, bottom: 50),
             decoration: BoxDecoration(
               color: kSecondPrimaryColor,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: ToDoList(),
+            child: const ToDoList(),
           ),
         )
       ],

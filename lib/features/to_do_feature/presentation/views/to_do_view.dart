@@ -9,7 +9,7 @@ class ToDoview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ToDoViewBody(),
+      body: const ToDoViewBody(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
