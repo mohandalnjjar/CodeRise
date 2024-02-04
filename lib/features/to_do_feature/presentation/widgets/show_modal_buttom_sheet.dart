@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_with_me/core/utils/constance.dart';
-import 'package:learn_with_me/features/to_do_feature/widgets/custom_text_form_field.dart';
+import 'package:learn_with_me/features/to_do_feature/presentation/widgets/custom_text_form_field.dart';
 
 class ShowModalButtomSheet extends StatefulWidget {
   const ShowModalButtomSheet({
@@ -29,9 +29,9 @@ class _ShowModalButtomSheetState extends State<ShowModalButtomSheet> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 5),
-              child: const Text(
+            const Padding(
+              padding: EdgeInsets.only(left: 5),
+              child: Text(
                 'Add Task',
                 style: TextStyle(
                   fontSize: 20,
@@ -59,7 +59,7 @@ class _ShowModalButtomSheetState extends State<ShowModalButtomSheet> {
                   });
                 }
               },
-              child: Text(
+              child: const Text(
                 'Add',
                 style: TextStyle(
                   color: Colors.white,

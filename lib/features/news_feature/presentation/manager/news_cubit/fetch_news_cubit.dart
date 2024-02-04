@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:learn_with_me/features/news_feature/data/models/news_model.dart';
-import 'package:learn_with_me/features/news_feature/data/models/repos/news_repo_impl.dart';
+import 'package:learn_with_me/features/news_feature/data/models/repository/news_repo_impl.dart';
 
 part 'fetch_news_state.dart';
 

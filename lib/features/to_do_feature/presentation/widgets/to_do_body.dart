@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_with_me/core/utils/constance.dart';
 import 'package:learn_with_me/core/utils/widgets/cutom_app_bar.dart';
-import 'package:learn_with_me/features/to_do_feature/widgets/to_do_list_view.dart';
+import 'package:learn_with_me/features/to_do_feature/presentation/widgets/to_do_list_view.dart';
 
 class ToDoViewBody extends StatelessWidget {
   const ToDoViewBody();

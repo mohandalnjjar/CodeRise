@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:learn_with_me/core/errors/failures.dart';
 import 'package:learn_with_me/core/utils/api_services.dart';
 import 'package:learn_with_me/features/news_feature/data/models/news_model.dart';
-import 'package:learn_with_me/features/news_feature/data/models/repos/news_Repo.dart';
+import 'package:learn_with_me/features/news_feature/data/models/repository/news_Repo.dart';
 
 class NewsRepoImpl implements NewsRpo {
   final ApiService apiService;
