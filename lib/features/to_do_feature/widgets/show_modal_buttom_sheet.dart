@@ -1,66 +1,75 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:learn_with_me/core/utils/constance.dart';
+import 'package:learn_with_me/features/to_do_feature/widgets/custom_text_form_field.dart';
 
-class ShowModalButtomSheet extends StatelessWidget {
+class ShowModalButtomSheet extends StatefulWidget {
   const ShowModalButtomSheet({
     super.key,
   });
 
   @override
+  State<ShowModalButtomSheet> createState() => _ShowModalButtomSheetState();
+}
+
+class _ShowModalButtomSheetState extends State<ShowModalButtomSheet> {
+  final GlobalKey<FormState> FormKey = GlobalKey();
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+  String? title;
+  @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: kPrimaryColor,
         borderRadius: BorderRadius.circular(20),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 5),
-            child: const Text(
-              'Add Task',
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: 20,
-            ),
-            child: TextFormField(
-              autofocus: true,
-              textAlign: TextAlign.center,
-              decoration: InputDecoration(
-                hintText: 'What to do ?',
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: const BorderSide(
-                    color: Colors.white,
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: const BorderSide(color: Colors.blue),
+      child: Form(
+        key: FormKey,
+        autovalidateMode: autovalidateMode,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 5),
+              child: const Text(
+                'Add Task',
+                style: TextStyle(
+                  fontSize: 20,
                 ),
               ),
             ),
-          ),
-          TextButton(
-            onPressed: () {},
-            child: Text(
-              'Add',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 17,
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 20,
+              ),
+              child: CustomTextFromField(
+                hint: 'What to do ?',
+                onSaved: (value) {
+                  title = value;
+                },
               ),
             ),
-            style: TextButton.styleFrom(backgroundColor: Colors.green),
-          ),
-        ],
+            TextButton(
+              onPressed: () {
+                if (FormKey.currentState!.validate()) {
+                  FormKey.currentState!.save();
+                } else {
+                  setState(() {
+                    autovalidateMode = AutovalidateMode.always;
+                  });
+                }
+              },
+              child: Text(
+                'Add',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 17,
+                ),
+              ),
+              style: TextButton.styleFrom(backgroundColor: Colors.green),
+            ),
+          ],
+        ),
       ),
     );
   }
