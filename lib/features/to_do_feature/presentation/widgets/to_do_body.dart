@@ -28,8 +28,8 @@ class ToDoViewBody extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 17),
               child: Text(
-                '${BlocProvider.of<FetchToDoCubit>(context).listNum} Jobs',
-                style: TextStyle(fontSize: 20),
+                '${BlocProvider.of<FetchToDoCubit>(context).ToDoList!.length} tasks',
+                style: TextStyle(fontSize: 18),
               ),
             ),
             Expanded(

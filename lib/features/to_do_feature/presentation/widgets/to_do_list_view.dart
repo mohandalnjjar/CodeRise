@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learn_with_me/features/to_do_feature/data/models/to_do_model.dart';
@@ -23,17 +25,16 @@ class _ToDoListState extends State<ToDoList> {
         return ListView.builder(
           itemCount: ToDos!.length,
           itemBuilder: (context, index) => ToDoListItem(
-            onPressd: () {
-              ToDos[index].delete();
-              BlocProvider.of<FetchToDoCubit>(context).FetchToDoMehod();
-              setState(() {});
-            },
             title: ToDos[index].title,
             isChecked: ToDos[index].isDone,
-            onChange: (value) {
+            onChange: (value) async {
               setState(() {
                 ToDos[index].isDoneMethod();
                 ToDos[index].save();
+              });
+              await Timer(Duration(seconds: 1), () {
+                ToDos[index].delete();
+                BlocProvider.of<FetchToDoCubit>(context).FetchToDoMehod();
               });
             },
           ),
