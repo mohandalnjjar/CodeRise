@@ -6,12 +6,13 @@ import 'package:learn_with_me/core/utils/service_locator.dart';
 import 'package:learn_with_me/features/news_feature/data/models/repository/news_repo_impl.dart';
 import 'package:learn_with_me/features/news_feature/presentation/manager/news_cubit/fetch_news_cubit.dart';
 import 'package:learn_with_me/features/to_do_feature/data/models/to_do_model.dart';
+import 'package:learn_with_me/features/to_do_feature/presentation/manager/fetch_to_do_cubit/fetch_to_do_cubit_cubit.dart';
 import 'core/utils/constance.dart';
 
 void main(List<String> args) async {
   await Hive.initFlutter();
   Hive.registerAdapter(ToDoModelAdapter());
-  await Hive.openBox(KToDoBox);
+  await Hive.openBox<ToDoModel>(KToDoBox);
 
   Locator();
   runApp(
@@ -24,12 +25,19 @@ class CodeRise extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) {
-        return FetchNewsCubit(
-          getit.get<NewsRepoImpl>(),
-        )..fetchNewsMethod();
-      },
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) {
+            return FetchNewsCubit(
+              getit.get<NewsRepoImpl>(),
+            )..fetchNewsMethod();
+          },
+        ),
+        BlocProvider(
+          create: (context) => FetchToDoCubit()..FetchToDoMehod(),
+        ),
+      ],
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,

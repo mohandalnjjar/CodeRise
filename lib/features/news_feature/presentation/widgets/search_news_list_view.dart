@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:learn_with_me/core/utils/widgets/error_snack_bar.dart';
+import 'package:learn_with_me/core/utils/widgets/sliver_error_snack_bar.dart';
 import 'package:learn_with_me/features/news_feature/presentation/manager/news_cubit/fetch_news_cubit.dart';
 import 'package:learn_with_me/features/news_feature/presentation/widgets/news_Item.dart';
 import 'package:learn_with_me/features/news_feature/presentation/widgets/news_loading_indicator.dart';
