@@ -37,6 +37,7 @@ class CodeRise extends StatelessWidget {
         BlocProvider(
           create: (context) => FetchToDoCubit()..FetchToDoMehod(),
         ),
+
       ],
       child: MaterialApp.router(
         routerConfig: AppRouter.router,

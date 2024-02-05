@@ -9,9 +9,12 @@ part 'fetch_to_do_cubit_state.dart';
 class FetchToDoCubit extends Cubit<FetchToDoCubitState> {
   FetchToDoCubit() : super(FetcToDoCubitInitial());
   List<ToDoModel>? ToDoList;
+  late int listNum;
   FetchToDoMehod() {
     var ToDoBox = Hive.box<ToDoModel>(KToDoBox);
     ToDoList = ToDoBox.values.toList();
+    listNum = ToDoList!.length;
+
     emit(
       FetchToDoCubitSuccess(),
     );

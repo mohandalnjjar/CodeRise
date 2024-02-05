@@ -49,6 +49,7 @@ class _ToDoFormState extends State<ToDoForm> {
                 FormKey.currentState!.save();
                 BlocProvider.of<AddToDoCubit>(context)
                     .AddToDoMethod(ToDoModel(title: title!));
+
               } else {
                 setState(() {
                   autovalidateMode = AutovalidateMode.always;

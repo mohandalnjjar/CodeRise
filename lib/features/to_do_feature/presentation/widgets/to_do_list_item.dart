@@ -3,12 +3,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ToDoListItem extends StatelessWidget {
   const ToDoListItem(
-      {required this.isChecked, required this.onChange, required this.title, required this.onPressd});
+      {required this.isChecked,
+      required this.onChange,
+      required this.title,
+      required this.onPressd});
 
   final bool? isChecked;
   final void Function(bool?)? onChange;
   final String title;
-final void Function() onPressd;
+  final void Function() onPressd;
   @override
   Widget build(BuildContext context) {
     return ListTile(
