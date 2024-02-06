@@ -32,7 +32,7 @@ class _ToDoListState extends State<ToDoList> {
                 ToDos[index].isDoneMethod();
                 ToDos[index].save();
               });
-              await Timer(Duration(seconds: 1), () {
+              await Timer(Duration(milliseconds: 500), () {
                 ToDos[index].delete();
                 BlocProvider.of<FetchToDoCubit>(context).FetchToDoMehod();
               });
