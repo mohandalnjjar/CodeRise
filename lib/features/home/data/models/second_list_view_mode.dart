@@ -1,8 +1,11 @@
-class SecondListViewModel {
+class ListViewModelData {
   final String Image;
-  final String Ttile;
+  final String title;
   final void Function() OnPressd;
 
-  SecondListViewModel(
-      {required this.Image, required this.Ttile, required this.OnPressd});
+  ListViewModelData({
+    required this.Image,
+    required this.title,
+    required this.OnPressd,
+  });
 }

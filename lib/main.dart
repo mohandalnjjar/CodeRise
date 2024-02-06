@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:learn_with_me/core/utils/app_router.dart';
 import 'package:learn_with_me/core/utils/service_locator.dart';
@@ -37,13 +38,13 @@ class CodeRise extends StatelessWidget {
         BlocProvider(
           create: (context) => FetchToDoCubit()..FetchToDoMehod(),
         ),
-
       ],
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: kPrimaryColor,
+          textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme),
         ),
       ),
     );

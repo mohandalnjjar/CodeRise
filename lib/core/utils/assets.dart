@@ -1,3 +1,3 @@
 class AssetData {
-  static const String testImage = 'assets/images/test.jpg';
+  static const String testImage = 'assets/images/te.jpg';
 }

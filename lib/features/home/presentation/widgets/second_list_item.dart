@@ -3,7 +3,7 @@ import 'package:learn_with_me/features/home/data/models/second_list_view_mode.da
 
 class SecondListItem extends StatelessWidget {
   const SecondListItem({super.key, required this.data});
-  final SecondListViewModel data;
+  final ListViewModelData data;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -25,7 +25,7 @@ class SecondListItem extends StatelessWidget {
               ),
               Spacer(),
               Text(
-                data.Ttile,
+                data.title,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),

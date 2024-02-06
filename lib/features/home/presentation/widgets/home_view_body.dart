@@ -26,18 +26,18 @@ class HomeViweBody extends StatelessWidget {
             icon: FontAwesomeIcons.magnifyingGlass,
           ),
         ),
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: CareersListView(),
         ),
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: SizedBox(
             height: 25,
           ),
         ),
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: SecondList(),
         ),
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: CustomText(),
         ),
         NewsListView(),

@@ -5,26 +5,26 @@ import 'package:learn_with_me/features/home/data/models/second_list_view_mode.da
 import 'package:learn_with_me/features/home/presentation/widgets/second_list_item.dart';
 
 class SecondList extends StatelessWidget {
-  SecondList({super.key});
+  const SecondList({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List DataList = [
-      SecondListViewModel(
-        Image: 'assets/trouble.png',
-        Ttile: 'To Do',
+    final List<ListViewModelData> DataList = [
+      ListViewModelData(
+        Image: 'assets/images/second_list_images/to_do.png',
+        title: 'To Do',
         OnPressd: () {
           GoRouter.of(context).push(kTODoHomeView);
         },
       ),
-      SecondListViewModel(
-        Image: 'assets/chat-gpt.png',
-        Ttile: 'Ai Chat',
+      ListViewModelData(
+        Image: 'assets/images/second_list_images/chat_gpt.png',
+        title: 'Ai Chat',
         OnPressd: () {},
       ),
-      SecondListViewModel(
-        Image: 'assets/education.png',
-        Ttile: 'Books',
+      ListViewModelData(
+        Image: 'assets/images/second_list_images/books.png',
+        title: 'Books',
         OnPressd: () {},
       ),
     ];
