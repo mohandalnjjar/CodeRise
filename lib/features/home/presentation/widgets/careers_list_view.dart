@@ -20,7 +20,7 @@ class CareersListView extends StatelessWidget {
       ),
       ListViewModelData(
         Image: 'assets/images/carres_list_images/propramming.jpg',
-        title: 'programming lang',
+        title: 'Computer Science',
         OnPressd: () {},
       ),
     ];

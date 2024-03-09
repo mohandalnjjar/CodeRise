@@ -3,7 +3,7 @@ class ListViewModelData {
   final String title;
   final void Function() OnPressd;
 
-  ListViewModelData({
+   ListViewModelData({
     required this.Image,
     required this.title,
     required this.OnPressd,

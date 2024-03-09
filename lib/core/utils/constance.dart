@@ -12,6 +12,8 @@ const kDetailsRouter = '/DetailsView';
 const kSearchScreenRouter = '/SearchView';
 const kTODoHomeView = '/kTODoHomeView';
 
+const KBookHomeView = '/KBookHomeView';
+
 //Hive package :
 
 const KToDoBox = 'ToDoBox';

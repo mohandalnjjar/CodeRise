@@ -25,7 +25,9 @@ class SecondList extends StatelessWidget {
       ListViewModelData(
         Image: 'assets/images/second_list_images/books.png',
         title: 'Books',
-        OnPressd: () {},
+        OnPressd: () {
+          GoRouter.of(context).push(KBookHomeView);
+        },
       ),
     ];
     return SizedBox(
