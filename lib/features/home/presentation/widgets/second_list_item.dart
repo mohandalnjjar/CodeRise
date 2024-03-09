@@ -3,7 +3,7 @@ import 'package:learn_with_me/features/home/data/models/second_list_view_mode.da
 
 class SecondListItem extends StatelessWidget {
   const SecondListItem({super.key, required this.data});
-  final ListViewModelData data;
+  final careersPageViewModel data;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(

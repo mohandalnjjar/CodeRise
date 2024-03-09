@@ -9,20 +9,20 @@ class SecondList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<ListViewModelData> DataList = [
-      ListViewModelData(
+    final List<careersPageViewModel> DataList = [
+      careersPageViewModel(
         Image: 'assets/images/second_list_images/to_do.png',
         title: 'To Do',
         OnPressd: () {
           GoRouter.of(context).push(kTODoHomeView);
         },
       ),
-      ListViewModelData(
+      careersPageViewModel(
         Image: 'assets/images/second_list_images/chat_gpt.png',
         title: 'Ai Chat',
         OnPressd: () {},
       ),
-      ListViewModelData(
+      careersPageViewModel(
         Image: 'assets/images/second_list_images/books.png',
         title: 'Books',
         OnPressd: () {

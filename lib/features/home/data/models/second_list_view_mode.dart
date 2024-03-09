@@ -1,9 +1,9 @@
-class ListViewModelData {
+class careersPageViewModel {
   final String Image;
   final String title;
   final void Function() OnPressd;
 
-   ListViewModelData({
+  careersPageViewModel({
     required this.Image,
     required this.title,
     required this.OnPressd,

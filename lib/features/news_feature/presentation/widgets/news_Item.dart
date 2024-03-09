@@ -16,7 +16,7 @@ class NewsItem extends StatelessWidget {
         GoRouter.of(context).push(kDetailsRouter, extra: NewsModelData);
       },
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 13),
+        padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 13),
         child: Container(
           padding: EdgeInsets.all(8),
           height: MediaQuery.of(context).size.height * .17,

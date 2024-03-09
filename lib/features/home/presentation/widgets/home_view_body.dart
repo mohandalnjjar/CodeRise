@@ -6,7 +6,7 @@ import 'package:learn_with_me/core/utils/widgets/cutom_app_bar.dart';
 import 'package:learn_with_me/features/home/presentation/widgets/second_item_list_view.dart';
 import 'package:learn_with_me/features/news_feature/presentation/widgets/news_list_view.dart';
 
-import 'careers_list_view.dart';
+import 'my_card_section.dart';
 import 'custom_text.dart';
 
 class HomeViweBody extends StatelessWidget {
@@ -27,7 +27,7 @@ class HomeViweBody extends StatelessWidget {
           ),
         ),
         const SliverToBoxAdapter(
-          child: CareersListView(),
+          child: myCardSection(),
         ),
         const SliverToBoxAdapter(
           child: SizedBox(

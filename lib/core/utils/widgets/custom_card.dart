@@ -8,12 +8,12 @@ class CardImage extends StatelessWidget {
     required this.data,
   });
 
-  final ListViewModelData data;
+  final careersPageViewModel data;
 
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 2.9 / 2,
+      aspectRatio: 3.5 / 2,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(18),
