@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learn_with_me/core/utils/constance.dart';
+import 'package:learn_with_me/core/utils/styles.dart';
 import 'package:learn_with_me/core/utils/widgets/shimmer_image_effect.dart';
 import 'package:learn_with_me/features/news_feature/data/models/news_model.dart';
 
@@ -16,7 +17,7 @@ class NewsItem extends StatelessWidget {
         GoRouter.of(context).push(kDetailsRouter, extra: NewsModelData);
       },
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 13),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 13),
         child: Container(
           padding: EdgeInsets.all(8),
           height: MediaQuery.of(context).size.height * .17,
@@ -50,10 +51,7 @@ class NewsItem extends StatelessWidget {
                   children: [
                     Text(
                       NewsModelData.title,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15,
-                      ),
+                      style: AppStyles.styleRegular16,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 3,
                     ),
@@ -62,9 +60,7 @@ class NewsItem extends StatelessWidget {
                               NewsModelData.description == null
                           ? 'Sorry There is No Description For this Article'
                           : NewsModelData.description!,
-                      style: TextStyle(
-                        color: Colors.grey,
-                      ),
+                      style: AppStyles.styleRegular14,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_with_me/core/utils/styles.dart';
 
 class CustomAppbar extends StatelessWidget {
   const CustomAppbar({
@@ -6,11 +7,9 @@ class CustomAppbar extends StatelessWidget {
     required this.title,
     required this.icon,
     this.onpressed,
-    this.TitleSize = 24,
     this.IconSize = 24,
   });
   final String title;
-  final double TitleSize;
   final IconData icon;
   final double IconSize;
 
@@ -24,7 +23,7 @@ class CustomAppbar extends StatelessWidget {
         children: [
           Text(
             title,
-            style: TextStyle(fontWeight: FontWeight.w600, fontSize: TitleSize),
+            style: AppStyles.styleSemiBold24,
           ),
           IconButton(
             icon: Icon(

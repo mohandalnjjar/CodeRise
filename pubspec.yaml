@@ -33,6 +33,7 @@ dependencies:
   cached_network_image: ^3.3.1
   cupertino_icons: ^1.0.2
   dartz: ^0.10.1
+  device_preview: ^1.1.0
   dio: ^5.4.0
   expandable_page_view: ^1.0.17
   flutter:
@@ -102,7 +103,7 @@ flutter:
   assets:
     - assets/
     - assets/images/second_list_images/
-    - assets/images/carres_list_images/
+    - assets/images/page_view_images/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

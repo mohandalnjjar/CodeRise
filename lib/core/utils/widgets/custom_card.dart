@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_with_me/core/utils/constance.dart';
+import 'package:learn_with_me/core/utils/styles.dart';
 import 'package:learn_with_me/features/home/data/models/second_list_view_mode.dart';
 
 class CardImage extends StatelessWidget {
@@ -42,9 +43,13 @@ class CardImage extends StatelessWidget {
                   end: Alignment.topCenter,
                 ),
               ),
-              child: FittedBox(
-                child: Text(
-                  data.title,
+              child: Center(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    data.title,
+                    style: AppStyles.styleSemiBold27,
+                  ),
                 ),
               ),
             ),

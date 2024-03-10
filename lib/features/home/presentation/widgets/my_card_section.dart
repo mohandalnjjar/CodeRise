@@ -28,17 +28,17 @@ class _myCardSectionState extends State<myCardSection> {
   Widget build(BuildContext context) {
     final List<careersPageViewModel> DataList = [
       careersPageViewModel(
-        Image: 'assets/images/carres_list_images/mobile.jpg',
+        Image: 'assets/images/page_view_images/mobile.jpg',
         title: 'Mobile Development',
         OnPressd: () {},
       ),
       careersPageViewModel(
-        Image: 'assets/images/carres_list_images/propramming.jpg',
+        Image: 'assets/images/page_view_images/propramming.jpg',
         title: 'Computer Science',
         OnPressd: () {},
       ),
       careersPageViewModel(
-        Image: 'assets/images/carres_list_images/web.jpg',
+        Image: 'assets/images/page_view_images/web.jpg',
         title: 'Web Development',
         OnPressd: () {},
       ),
@@ -60,4 +60,3 @@ class _myCardSectionState extends State<myCardSection> {
     );
   }
 }
-

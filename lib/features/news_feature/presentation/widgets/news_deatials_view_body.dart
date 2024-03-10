@@ -34,7 +34,7 @@ class NewsDetailsViewBody extends StatelessWidget {
                 children: [
                   Text(
                     newsModel.title,
-                    style: Styles.BigTitle,
+                    style: AppStyles.styleSemiBold24,
                   ),
                   const SizedBox(
                     height: 20,
@@ -43,7 +43,7 @@ class NewsDetailsViewBody extends StatelessWidget {
                     newsModel.author == '' || newsModel.author == null
                         ? 'Un Konwn'
                         : newsModel.author!,
-                    style: TextStyle(fontSize: 14, color: Colors.grey),
+                    style: AppStyles.styleRegular14,
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -52,7 +52,7 @@ class NewsDetailsViewBody extends StatelessWidget {
                   ),
                   Text(
                     "Posted at ${newsModel.publishedAt.year}:${newsModel.publishedAt.month}:${newsModel.publishedAt.day}",
-                    style: TextStyle(fontSize: 14, color: Colors.grey),
+                    style: AppStyles.styleRegular14,
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -75,7 +75,7 @@ class NewsDetailsViewBody extends StatelessWidget {
                   ),
                   const Text(
                     'Description',
-                    style: Styles.BigTitle,
+                    style: AppStyles.styleSemiBold24,
                   ),
                   const SizedBox(
                     height: 20,
@@ -84,14 +84,14 @@ class NewsDetailsViewBody extends StatelessWidget {
                     newsModel.description == '' || newsModel.description == null
                         ? 'Sorry There is No Description For this Article'
                         : newsModel.description!,
-                    style: Styles.MediumTitle,
+                    style: AppStyles.styleRegular18,
                   ),
                   const SizedBox(
                     height: 20,
                   ),
                   const Text(
                     'Content',
-                    style: Styles.BigTitle,
+                    style: AppStyles.styleSemiBold24,
                   ),
                   const SizedBox(
                     height: 20,
@@ -100,7 +100,7 @@ class NewsDetailsViewBody extends StatelessWidget {
                     newsModel.content == '' || newsModel.content == null
                         ? 'There is no content for this article'
                         : newsModel.content!,
-                    style: Styles.MediumTitle,
+                    style: AppStyles.styleRegular18,
                   ),
                 ],
               ),

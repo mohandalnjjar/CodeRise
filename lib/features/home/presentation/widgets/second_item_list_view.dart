@@ -31,6 +31,7 @@ class SecondList extends StatelessWidget {
       ),
     ];
     return SizedBox(
+      
       height: MediaQuery.of(context).size.height * .140,
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
@@ -48,3 +49,5 @@ class SecondList extends StatelessWidget {
     );
   }
 }
+
+

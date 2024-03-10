@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_with_me/core/utils/styles.dart';
 import 'package:learn_with_me/features/home/data/models/second_list_view_mode.dart';
 
 class SecondListItem extends StatelessWidget {
@@ -23,14 +24,21 @@ class SecondListItem extends StatelessWidget {
                   data.Image,
                 ),
               ),
-              Spacer(),
-              Text(
-                data.title,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
+              const SizedBox(
+                height: 3,
+              ),
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    data.title,
+                    style: AppStyles.styleBold,
+                  ),
                 ),
               ),
-              Spacer(),
+              const SizedBox(
+                height: 3,
+              ),
             ],
           ),
         ),
