@@ -21,7 +21,7 @@ class BooksList extends StatelessWidget {
             onTap: () {
               GoRouter.of(context).push(kBooksDetailseView);
             },
-            child: BestSellerListViewItem(),
+            child: booksList(),
           ),
         ),
         scrollDirection: Axis.horizontal,

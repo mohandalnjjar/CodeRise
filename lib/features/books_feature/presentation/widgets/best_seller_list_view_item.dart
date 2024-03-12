@@ -1,8 +1,9 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:learn_with_me/core/utils/styles.dart';
 
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+class booksList extends StatelessWidget {
+  const booksList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +17,20 @@ class BestSellerListViewItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(14),
-                  image: DecorationImage(
-                    image: NetworkImage(
-                        'https://images.pexels.com/photos/2908773/pexels-photo-2908773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
-                    fit: BoxFit.fill,
+              child: ClipRRect(
+                borderRadius: BorderRadiusDirectional.circular(14),
+                child: CachedNetworkImage(
+                  imageUrl:
+                      "https://images.pexels.com/photos/2908773/pexels-photo-2908773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                  placeholder: (context, url) => Image.network(
+                    'https://images.pexels.com/photos/3387168/pexels-photo-3387168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                   ),
+                  errorWidget: (context, url, error) => const Center(
+                    child: Icon(
+                      Icons.error,
+                    ),
+                  ),
+                  fit: BoxFit.fill,
                 ),
               ),
             ),

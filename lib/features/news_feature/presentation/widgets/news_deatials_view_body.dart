@@ -67,7 +67,11 @@ class NewsDetailsViewBody extends StatelessWidget {
                       placeholder: (context, url) => Image.network(
                         'https://cdn.pixabay.com/photo/2022/01/31/19/30/error-6984855_1280.png',
                       ),
-                      errorWidget: (context, url, error) => Icon(Icons.error),
+                      errorWidget: (context, url, error) => const Center(
+                        child: Icon(
+                          Icons.error,
+                        ),
+                      ),
                     ),
                   ),
                   const SizedBox(
