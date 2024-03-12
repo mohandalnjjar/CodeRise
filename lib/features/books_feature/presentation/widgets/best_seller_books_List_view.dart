@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:learn_with_me/core/utils/constance.dart';
 import 'package:learn_with_me/features/books_feature/presentation/widgets/best_seller_list_view_item.dart';
 
 class BooksList extends StatelessWidget {
@@ -15,7 +17,12 @@ class BooksList extends StatelessWidget {
           padding: const EdgeInsets.symmetric(
             horizontal: 10,
           ),
-          child: BestSellerListViewItem(),
+          child: GestureDetector(
+            onTap: () {
+              GoRouter.of(context).push(kBooksDetailseView);
+            },
+            child: BestSellerListViewItem(),
+          ),
         ),
         scrollDirection: Axis.horizontal,
       ),

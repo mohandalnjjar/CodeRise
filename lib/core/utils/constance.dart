@@ -11,6 +11,7 @@ const kMainRouter = '/';
 const kDetailsRouter = '/DetailsView';
 const kSearchScreenRouter = '/SearchView';
 const kTODoHomeView = '/kTODoHomeView';
+const kBooksDetailseView = '/kBooksDetailseView';
 
 const KBookHomeView = '/KBookHomeView';
 
