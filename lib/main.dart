@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,7 +18,14 @@ void main(List<String> args) async {
 
   Locator();
   runApp(
-    const CodeRise(),
+    DevicePreview(
+      enabled: false,
+      builder: (
+        context,
+      ) {
+        return const CodeRise();
+      },
+    ),
   );
 }
 
@@ -40,6 +48,8 @@ class CodeRise extends StatelessWidget {
         ),
       ],
       child: MaterialApp.router(
+        locale: DevicePreview.locale(context),
+        builder: DevicePreview.appBuilder,
         routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(

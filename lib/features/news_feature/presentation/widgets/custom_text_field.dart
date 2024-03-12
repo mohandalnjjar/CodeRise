@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class CustomTextField extends StatelessWidget {
-  const CustomTextField({
+class CustomSearchFiled extends StatelessWidget {
+  const CustomSearchFiled({
     super.key,
   });
 
@@ -12,11 +12,11 @@ class CustomTextField extends StatelessWidget {
       textAlign: TextAlign.center,
       decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(35),
+            borderRadius: BorderRadius.circular(17),
             borderSide: BorderSide(color: Colors.white),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: BorderRadius.circular(17),
             borderSide: BorderSide(color: Colors.blue),
           ),
           prefixIcon: IconButton(

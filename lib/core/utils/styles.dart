@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 abstract class AppStyles {
   static const TextStyle styleSemiBold24 =
       TextStyle(fontWeight: FontWeight.w600, fontSize: 24);
+  static const TextStyle styleSemiBold16 =
+      TextStyle(fontWeight: FontWeight.w600, fontSize: 15);
 
   static const TextStyle styleSemiBold27 =
       TextStyle(fontWeight: FontWeight.w600, fontSize: 27);
@@ -19,5 +21,3 @@ abstract class AppStyles {
   static const TextStyle styleRegular14 =
       TextStyle(fontSize: 14, color: Colors.grey);
 }
-
-

@@ -19,9 +19,8 @@ class SearchScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(
-                      child: CustomTextField(),
+                      child: CustomSearchFiled(),
                     ),
-                  
                   ],
                 ),
               ),
