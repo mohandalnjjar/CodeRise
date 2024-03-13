@@ -43,7 +43,7 @@ class NewsDetailsViewBody extends StatelessWidget {
                     newsModel.author == '' || newsModel.author == null
                         ? 'Un Konwn'
                         : newsModel.author!,
-                    style: AppStyles.styleRegular14,
+                    style: AppStyles.styleMonserateRegular18,
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -52,7 +52,7 @@ class NewsDetailsViewBody extends StatelessWidget {
                   ),
                   Text(
                     "Posted at ${newsModel.publishedAt.year}:${newsModel.publishedAt.month}:${newsModel.publishedAt.day}",
-                    style: AppStyles.styleRegular14,
+                    style: AppStyles.styleMonserateRegular18,
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                   ),

@@ -60,7 +60,7 @@ class NewsItem extends StatelessWidget {
                               NewsModelData.description == null
                           ? 'Sorry There is No Description For this Article'
                           : NewsModelData.description!,
-                      style: AppStyles.styleRegular14,
+                      style: AppStyles.styleMonserateRegular18,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),

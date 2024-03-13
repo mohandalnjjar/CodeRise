@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 abstract class AppStyles {
   static const TextStyle styleSemiBold24 =
@@ -18,6 +19,24 @@ abstract class AppStyles {
   static const TextStyle styleBold =
       TextStyle(fontWeight: FontWeight.w700, fontSize: 20);
 
-  static const TextStyle styleRegular14 =
-      TextStyle(fontSize: 14, color: Colors.grey);
+  static const TextStyle styleRegular14 = TextStyle(
+    fontSize: 14,
+    color: Colors.grey,
+  );
+
+  static const TextStyle styleGtSectraRegular30 = TextStyle(
+    fontSize: 30,
+    fontFamily: 'GTSectra',
+  );
+
+  static TextStyle styleMonserateRegular18 = GoogleFonts.montserrat(
+    color: Colors.grey,
+    fontSize: 18,
+    fontWeight: FontWeight.w400,
+  );
+   static TextStyle styleMonserateRegular14 = GoogleFonts.montserrat(
+    color: Colors.grey,
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+  );
 }

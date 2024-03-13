@@ -47,7 +47,7 @@ class booksList extends StatelessWidget {
               "Anders Hejlsberg",
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: AppStyles.styleRegular14.copyWith(fontSize: 13),
+              style: AppStyles.styleMonserateRegular18.copyWith(fontSize: 13),
             ),
           ],
         ),
